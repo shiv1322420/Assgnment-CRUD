@@ -1,0 +1,95 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "version": "1.0.0",
+        "description": "Query operations",
+        "title": "CRUD operations using ASYNC and Promises"
+    },
+    "host": "localhost:5000",
+    "basePath": "/",
+    "schemes": [
+        "http"
+    ],
+    "paths": {
+        "/addstudent": {
+            "post": {
+                "description": "Api of insert",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "student object  the need to be update",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successfully Inserted."
+                    }
+                }
+            }
+        },
+        "/students": {
+            "get": {
+                "description": "To show the student details",
+                "responses": {
+                    "200": {
+                        "description": "Successfully fetched the data"
+                    }
+                }
+            }
+        },
+
+        "/students/6": {
+            "get": {
+                "description": "get record of particular student",
+                "responses": {
+                    "200": {
+                        "description": "Successfully fetched the data"
+                    }
+                }
+            }
+        },
+        "/students/2": {
+            "delete": {
+                "description": "To delete by the id",
+                "responses": {
+                    "200": {
+                        "description": "Successfully fetched the data"
+                    }
+                }
+            }
+        },
+        "/students/1": {
+            "put": {
+                "description": "Api of Update",
+                "summary": "Update an existing student",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "add student obhject  the need to be store in database",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successfully Inserted."
+                    }
+                }
+            }
+        }
+    }
+}
